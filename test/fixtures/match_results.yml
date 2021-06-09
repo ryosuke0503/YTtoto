@@ -1,0 +1,29 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  year: 1
+  league: MyString
+  kind: MyString
+  date: MyString
+  time: MyString
+  home: one
+  homescore: 1
+  awayscore: 1
+  away: one
+  stadium: MyString
+  viewers: 1
+  broadcasts: MyString
+
+two:
+  year: 1
+  league: MyString
+  kind: MyString
+  date: MyString
+  time: MyString
+  home: two
+  homescore: 1
+  awayscore: 1
+  away: two
+  stadium: MyString
+  viewers: 1
+  broadcasts: MyString

@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @match_result.year %>
+</p>
+
+<p>
+  <strong>League:</strong>
+  <%= @match_result.league %>
+</p>
+
+<p>
+  <strong>Kind:</strong>
+  <%= @match_result.kind %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @match_result.date %>
+</p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @match_result.time %>
+</p>
+
+<p>
+  <strong>Home:</strong>
+  <%= @match_result.home_id %>
+</p>
+
+<p>
+  <strong>Homescore:</strong>
+  <%= @match_result.homescore %>
+</p>
+
+<p>
+  <strong>Awayscore:</strong>
+  <%= @match_result.awayscore %>
+</p>
+
+<p>
+  <strong>Away:</strong>
+  <%= @match_result.away_id %>
+</p>
+
+<p>
+  <strong>Stadium:</strong>
+  <%= @match_result.stadium %>
+</p>
+
+<p>
+  <strong>Viewers:</strong>
+  <%= @match_result.viewers %>
+</p>
+
+<p>
+  <strong>Broadcasts:</strong>
+  <%= @match_result.broadcasts %>
+</p>
+
+<%= link_to 'Edit', edit_match_result_path(@match_result) %> |
+<%= link_to 'Back', match_results_path %>

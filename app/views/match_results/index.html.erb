@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Match Results</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>League</th>
+      <th>Kind</th>
+      <th>Date</th>
+      <th>Time</th>
+      <th>Home</th>
+      <th>Homescore</th>
+      <th>Awayscore</th>
+      <th>Away</th>
+      <th>Stadium</th>
+      <th>Viewers</th>
+      <th>Broadcasts</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @match_results.each do |match_result| %>
+      <tr>
+        <td><%= match_result.year %></td>
+        <td><%= match_result.league %></td>
+        <td><%= match_result.kind %></td>
+        <td><%= match_result.date %></td>
+        <td><%= match_result.time %></td>
+        <td><%= match_result.home_id %></td>
+        <td><%= match_result.homescore %></td>
+        <td><%= match_result.awayscore %></td>
+        <td><%= match_result.away_id %></td>
+        <td><%= match_result.stadium %></td>
+        <td><%= match_result.viewers %></td>
+        <td><%= match_result.broadcasts %></td>
+        <td><%= link_to 'Show', match_result %></td>
+        <td><%= link_to 'Edit', edit_match_result_path(match_result) %></td>
+        <td><%= link_to 'Destroy', match_result, method: :delete %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Match Result', new_match_result_path %>
+<%=form_tag import_match_results_path, multipart: true do%>
+  <%= file_field_tag :file ,accept:"text/csv" %>
+  <%= submit_tag "インポートする"%>
+<%end%>

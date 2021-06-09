@@ -1,0 +1,77 @@
+<%= form_with(model: match_result) do |form| %>
+  <% if match_result.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(match_result.errors.count, "error") %> prohibited this match_result from being saved:</h2>
+
+      <ul>
+        <% match_result.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :year %>
+    <%= form.number_field :year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :league %>
+    <%= form.text_field :league %>
+  </div>
+
+  <div class="field">
+    <%= form.label :kind %>
+    <%= form.text_field :kind %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.text_field :date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :time %>
+    <%= form.text_field :time %>
+  </div>
+
+  <div class="field">
+    <%= form.label :home_id %>
+    <%= form.text_field :home_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :homescore %>
+    <%= form.number_field :homescore %>
+  </div>
+
+  <div class="field">
+    <%= form.label :awayscore %>
+    <%= form.number_field :awayscore %>
+  </div>
+
+  <div class="field">
+    <%= form.label :away_id %>
+    <%= form.text_field :away_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :stadium %>
+    <%= form.text_field :stadium %>
+  </div>
+
+  <div class="field">
+    <%= form.label :viewers %>
+    <%= form.number_field :viewers %>
+  </div>
+
+  <div class="field">
+    <%= form.label :broadcasts %>
+    <%= form.text_field :broadcasts %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

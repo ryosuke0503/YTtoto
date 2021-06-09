@@ -1,0 +1,14 @@
+<h1>チーム一覧</h1>
+
+<% @teams.each do |team| %>
+    <td><%= team.id %></td>
+    <td><%= link_to team.name, team_path(id: team.id) %></td>
+    <td><%= link_to '編集', edit_team_path(team) %></td>
+    <td><%= button_to '削除', team_path(team), method: :delete %></td>
+<% end %>
+
+<%= link_to '追加', new_team_path %>
+<%=form_tag import_teams_path, multipart: true do%>
+    <%= file_field_tag :file ,accept:"text/csv" %>
+    <%= submit_tag "インポートする"%>
+<%end%>
